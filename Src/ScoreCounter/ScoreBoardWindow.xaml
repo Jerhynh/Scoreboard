@@ -1,0 +1,31 @@
+﻿<Window x:Class="ScoreCounter.ScoreBoardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoreCounter"
+        mc:Ignorable="d"
+        Title="PingPong Scoreboard | Version: 1.0.2"
+        Height="450" Width="800"
+        Background="#212121">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="Toggle Fullscreen" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Click="FullScrnButton_Click"/>
+        <Button Content="Settings" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,25,0,0" Click="SettingsButton_Click"/>
+        <Label  Content="Team Red" Foreground="Red" FontSize="55" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label  Content="Team Blue" Foreground="Blue" Grid.Column="1" FontSize="55" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <Label Name="RedTeamLbl" Content="0" Foreground="Red" FontSize="200" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="AddPointBtnRed" Content="Add Point" Height="50" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="AddPointBtnRed_Click"/>
+        <Button x:Name="ResetPointBtnRed" Content="Reset Point" Height="50" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ResetPointBtnRed_Click"/>
+        <Button x:Name="RevokePointBtnRed" Content="Revoke Point" Height="50" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="RevokePointBtnRed_Click"/>
+
+        <Label Name="BlueTeamLbl" Grid.Column="1" Content="0" Foreground="Blue" FontSize="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="AddPointBtnBlue" Grid.Column="1" Height="50" Width="100" Content="Add Point" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="AddPointBtnBlue_Click"/>
+        <Button x:Name="ResetPointBtnBlue" Grid.Column="1" Height="50" Width="100" Content="Reset Point" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ResetPointBtnBlue_Click"/>
+        <Button x:Name="RevokePointBtnBlue" Content="Revoke Point" Grid.Column="1" Height="50" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="RevokePointBtnBlue_Click"/>
+    </Grid>
+</Window>
